@@ -1,1 +1,2 @@
+//comando usado para gerar o executavel no Windows 10 usando o Visual Studio Code
 gcc main.c -o snake.exe -O1 -Wall -std=c99 -Wno-missing-braces -I include/ -L lib/ -lraylib -lopengl32 -lgdi32 -lwinmm
