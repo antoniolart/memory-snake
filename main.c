@@ -262,10 +262,13 @@ void DesenharTela(void)
             DrawText(TextFormat("%03d", highScore), 1085, 120, 40, WHITE);
 
             //Desenhar instrucoes do jogo no lado esquerdo da tela
-            DrawText("Use as |SETAS| ou |WASD|", 0, 100, 20, WHITE);
-            DrawText("para controlar a cobra", 0, 120, 20, WHITE);
-            DrawText("Aperte |P| para pausar", 0, 180, 20, WHITE);
-            DrawText("Aperte |ESC| para sair", 0, 240, 20, WHITE);
+            if(!debug)
+            {
+                DrawText("Use as |SETAS| ou |WASD|", 0, 100, 20, WHITE);
+                DrawText("para controlar a cobra", 0, 120, 20, WHITE);
+                DrawText("Aperte |P| para pausar", 0, 180, 20, WHITE);
+                DrawText("Aperte |ESC| para sair", 0, 240, 20, WHITE);
+            }
 
             //Desenha as linhas do mapa
             for(int i = 0; i < 620/QUADRADO_TAM + 1; i++)
