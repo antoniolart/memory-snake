@@ -457,7 +457,7 @@ void AtualizarJogo(void)
                         for(int i = 0; i < tamCalda; i++)
                         {
                             //Verifica se a maca nao ira spawnar em uma posicao que a cobra ja ocupa
-                            while(((maca.posicao.x == cobra[i].posicao.x) && ((((maca.posicao.x) - (cobra[0].posicao.x) > 62 || (maca.posicao.x) - (cobra[0].posicao.x) < -62) && ((maca.posicao.y) - (cobra[0].posicao.y) > 62 || (maca.posicao.y) - (cobra[0].posicao.y) < -62)) || score <= 300) && (maca.posicao.y == cobra[i].posicao.y)) || ((maca.posicao.x == banana.posicao.x) && (maca.posicao.y == banana.posicao.y)) || ((maca.posicao.x == blueberry.posicao.x) && (maca.posicao.y == blueberry.posicao.y)) || ((maca.posicao.x == limao.posicao.x) && (maca.posicao.y == limao.posicao.y)))
+                            while(((maca.posicao.x == cobra[i].posicao.x) && ((((maca.posicao.x) - (cobra[0].posicao.x) > 62 || (maca.posicao.x) - (cobra[0].posicao.x) < -62) && ((maca.posicao.y) - (cobra[0].posicao.y) > 62 || (maca.posicao.y) - (cobra[0].posicao.y) < -62)) || score >= 300) && (maca.posicao.y == cobra[i].posicao.y)) || ((maca.posicao.x == banana.posicao.x) && (maca.posicao.y == banana.posicao.y)) || ((maca.posicao.x == blueberry.posicao.x) && (maca.posicao.y == blueberry.posicao.y)) || ((maca.posicao.x == limao.posicao.x) && (maca.posicao.y == limao.posicao.y)))
                             {
                                 maca.posicao = (Vector2){ GetRandomValue(344.5/QUADRADO_TAM, 933.5/QUADRADO_TAM) * QUADRADO_TAM + offset.x/2, GetRandomValue(35.5/QUADRADO_TAM, 624.5/QUADRADO_TAM) * QUADRADO_TAM + offset.y/2};
                                 i = 0;
@@ -482,7 +482,7 @@ void AtualizarJogo(void)
                             for(int i = 0; i < tamCalda; i++)
                             {
                                 //Verifica se a maca nao ira spawnar em uma posicao que a cobra ja ocupa
-                                while(((banana.posicao.x == cobra[i].posicao.x) && ((((banana.posicao.x) - (cobra[0].posicao.x) > 62 || (banana.posicao.x) - (cobra[0].posicao.x) < -62) && ((banana.posicao.y) - (cobra[0].posicao.y) > 62 || (banana.posicao.y) - (cobra[0].posicao.y) < -62)) || score <= 300) && (banana.posicao.y == cobra[i].posicao.y)) || ((banana.posicao.x == maca.posicao.x) && (banana.posicao.y == maca.posicao.y)) || ((banana.posicao.x == blueberry.posicao.x) && (banana.posicao.y == blueberry.posicao.y)) || ((banana.posicao.x == limao.posicao.x) && (banana.posicao.y == limao.posicao.y)))
+                                while(((banana.posicao.x == cobra[i].posicao.x) && ((((banana.posicao.x) - (cobra[0].posicao.x) > 62 || (banana.posicao.x) - (cobra[0].posicao.x) < -62) && ((banana.posicao.y) - (cobra[0].posicao.y) > 62 || (banana.posicao.y) - (cobra[0].posicao.y) < -62)) || score >= 300) && (banana.posicao.y == cobra[i].posicao.y)) || ((banana.posicao.x == maca.posicao.x) && (banana.posicao.y == maca.posicao.y)) || ((banana.posicao.x == blueberry.posicao.x) && (banana.posicao.y == blueberry.posicao.y)) || ((banana.posicao.x == limao.posicao.x) && (banana.posicao.y == limao.posicao.y)))
                                 {
                                     banana.posicao = (Vector2){ GetRandomValue(344.5/QUADRADO_TAM, 933.5/QUADRADO_TAM) * QUADRADO_TAM + offset.x/2, GetRandomValue(35.5/QUADRADO_TAM, 624.5/QUADRADO_TAM) * QUADRADO_TAM + offset.y/2};
                                     i = 0;
@@ -504,7 +504,7 @@ void AtualizarJogo(void)
                             for(int i = 0; i < tamCalda; i++)
                             {
                                 //Verifica se a maca nao ira spawnar em uma posicao que a cobra ja ocupa
-                                while(((blueberry.posicao.x == cobra[i].posicao.x) && ((((blueberry.posicao.x) - (cobra[0].posicao.x) > 62 || (blueberry.posicao.x) - (cobra[0].posicao.x) < -62) && ((blueberry.posicao.y) - (cobra[0].posicao.y) > 62 || (blueberry.posicao.y) - (cobra[0].posicao.y) < -62)) || score <= 300) && (blueberry.posicao.y == cobra[i].posicao.y)) || ((blueberry.posicao.x == banana.posicao.x) && (blueberry.posicao.y == banana.posicao.y)) || ((blueberry.posicao.x == maca.posicao.x) && (blueberry.posicao.y == maca.posicao.y)) || ((blueberry.posicao.x == limao.posicao.x) && (blueberry.posicao.y == limao.posicao.y)))
+                                while(((blueberry.posicao.x == cobra[i].posicao.x) && ((((blueberry.posicao.x) - (cobra[0].posicao.x) > 62 || (blueberry.posicao.x) - (cobra[0].posicao.x) < -62) && ((blueberry.posicao.y) - (cobra[0].posicao.y) > 62 || (blueberry.posicao.y) - (cobra[0].posicao.y) < -62)) || score >= 300) && (blueberry.posicao.y == cobra[i].posicao.y)) || ((blueberry.posicao.x == banana.posicao.x) && (blueberry.posicao.y == banana.posicao.y)) || ((blueberry.posicao.x == maca.posicao.x) && (blueberry.posicao.y == maca.posicao.y)) || ((blueberry.posicao.x == limao.posicao.x) && (blueberry.posicao.y == limao.posicao.y)))
                                 {
                                     blueberry.posicao = (Vector2){ GetRandomValue(344.5/QUADRADO_TAM, 933.5/QUADRADO_TAM) * QUADRADO_TAM + offset.x/2, GetRandomValue(35.5/QUADRADO_TAM, 624.5/QUADRADO_TAM) * QUADRADO_TAM + offset.y/2};
                                     i = 0;
@@ -526,7 +526,7 @@ void AtualizarJogo(void)
                             for(int i = 0; i < tamCalda; i++)
                             {
                                 //Verifica se a maca nao ira spawnar em uma posicao que a cobra ja ocupa
-                                while(((limao.posicao.x == cobra[i].posicao.x) && ((((limao.posicao.x) - (cobra[0].posicao.x) > 62 || (limao.posicao.x) - (cobra[0].posicao.x) < -62) && ((limao.posicao.y) - (cobra[0].posicao.y) > 62 || (limao.posicao.y) - (cobra[0].posicao.y) < -62)) || score <= 300) && (limao.posicao.y == cobra[i].posicao.y)) || ((limao.posicao.x == banana.posicao.x) && (limao.posicao.y == banana.posicao.y)) || ((limao.posicao.x == blueberry.posicao.x) && (limao.posicao.y == blueberry.posicao.y)) || ((limao.posicao.x == maca.posicao.x) && (limao.posicao.y == maca.posicao.y)))
+                                while(((limao.posicao.x == cobra[i].posicao.x) && ((((limao.posicao.x) - (cobra[0].posicao.x) > 62 || (limao.posicao.x) - (cobra[0].posicao.x) < -62) && ((limao.posicao.y) - (cobra[0].posicao.y) > 62 || (limao.posicao.y) - (cobra[0].posicao.y) < -62)) || score >= 300) && (limao.posicao.y == cobra[i].posicao.y)) || ((limao.posicao.x == banana.posicao.x) && (limao.posicao.y == banana.posicao.y)) || ((limao.posicao.x == blueberry.posicao.x) && (limao.posicao.y == blueberry.posicao.y)) || ((limao.posicao.x == maca.posicao.x) && (limao.posicao.y == maca.posicao.y)))
                                 {
                                     limao.posicao = (Vector2){ GetRandomValue(344.5/QUADRADO_TAM, 933.5/QUADRADO_TAM) * QUADRADO_TAM + offset.x/2, GetRandomValue(35.5/QUADRADO_TAM, 624.5/QUADRADO_TAM) * QUADRADO_TAM + offset.y/2};
                                     i = 0;
